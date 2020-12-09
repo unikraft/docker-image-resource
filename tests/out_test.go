@@ -401,14 +401,14 @@ var _ = Describe("Out", func() {
 	})
 
 	Context("When passing tag ", func() {
-		It("should pull tag from file", func() {
+		It("should use tag param", func() {
 			session := put(map[string]interface{}{
 				"source": map[string]interface{}{
 					"repository": "test",
 				},
 				"params": map[string]interface{}{
 					"build": "/docker-image-resource/tests/fixtures/build",
-					"tag":   "/docker-image-resource/tests/fixtures/tag",
+					"tag":   "foo",
 				},
 			},
 			)
